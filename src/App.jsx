@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
+import  './i18n'
 import { MovieContextProvider } from './contexts/MovieContext'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'

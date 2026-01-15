@@ -2,7 +2,7 @@
 
 Веб-интерфейс простого каталога фильмов с поиском, возможностью добавлять в «Избранное», выбором языка и переключением темы.
 
-**Stack:** [React](https://react.dev), [Vite](https://vite.dev), [React Router](https://reactrouter.com)<br>
+**Stack:** [React](https://react.dev), [Vite](https://vite.dev), [React Router](https://reactrouter.com), [React-i18next](https://react.i18next.com)<br>
 **API:** [The Movie Database (TMDB)](https://www.themoviedb.org)
 
 ## Запуск
