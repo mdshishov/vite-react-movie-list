@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getPopularMovies, searchMovies } from '../services/api'
-import MovieCard from '../components/MovieCard'
+import MoviesGrid from '../components/MoviesGrid'
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -67,11 +67,7 @@ function Home() {
       {loading ? (
         <div className="loading">Loading...</div>
       ) : (
-        <div className="movies-grid">
-          {movies.map(movie => (
-            <MovieCard movie={movie} key={movie.id} />
-          ))}
-        </div>
+        <MoviesGrid movies={movies}/>
       )}
     </div>
   )
