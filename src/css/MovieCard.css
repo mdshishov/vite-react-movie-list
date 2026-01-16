@@ -39,16 +39,25 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
-  transition: opacity 0.4s, box-shadow 0.4s;
+  transition: opacity 0.4s, box-shadow 0.4s, transform 0.4s;
+  padding-top: 5px;
 }
 .movie-card__favorite-btn.active {
   opacity: 1;
 }
 .movie-card__favorite-btn:hover {
   box-shadow: var(--shadow1);
+  transform: scale(1.1);
 }
 .movie-card:hover .movie-card__favorite-btn {
   opacity: 1;
+}
+
+.movie-card__favorite-btn svg path {
+  fill: var(--text-pr);
+}
+.movie-card__favorite-btn.active svg path {
+  fill: var(--accent1);
 }
 
 .movie-card__poster {

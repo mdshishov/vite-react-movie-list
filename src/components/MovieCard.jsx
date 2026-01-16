@@ -1,5 +1,7 @@
 import '../css/MovieCard.css'
 import { useMovieContext } from '../contexts/MovieContext'
+import HeartEmptyIcon from './icons/HeartEmpty'
+import HeartFilledIcon from './icons/HeartFilled'
 
 function MovieCard({ movie }) {
   const { addFavorite, removeFavorite, isFavorite } = useMovieContext()
@@ -14,7 +16,7 @@ function MovieCard({ movie }) {
   return (
     <div className="movie-card">
       <button className={`movie-card__favorite-btn ${favorite ? 'active' : ''}`} onClick={onFavoriteClick}>
-        &lt;3
+        {favorite ? <HeartFilledIcon /> : <HeartEmptyIcon />}
       </button>
       <div className="movie-card__poster">
         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
