@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { getPopularMovies, searchMovies } from '../services/api'
 import MoviesGrid from '../components/MoviesGrid'
+import { useTranslation } from 'react-i18next'
+import '../css/Home.css'
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -8,11 +10,12 @@ function Home() {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
 
+  const { t, i18n } = useTranslation()
+
   useEffect(() => {
     const loadPopularMovies = async () => {
       try {
         const popularMovies = await getPopularMovies()
-        console.log(popularMovies)
         setMovies(popularMovies)
       }
       catch (e) {
@@ -24,8 +27,11 @@ function Home() {
       }
     }
 
+    document.title = t('home.pageTitle')
+    document.documentElement.lang = i18n.language
+
     loadPopularMovies()
-  }, [])
+  }, [i18n.language])
 
   const handleSearch = async (e) => {
     e.preventDefault()
@@ -67,7 +73,7 @@ function Home() {
       {loading ? (
         <div className="loading">Loading...</div>
       ) : (
-        <MoviesGrid movies={movies}/>
+        <MoviesGrid movies={movies} />
       )}
     </div>
   )
