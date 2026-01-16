@@ -15,6 +15,9 @@ function Home() {
   useEffect(() => {
     const loadPopularMovies = async () => {
       try {
+        setLoading(true)
+        setError(null)
+
         const popularMovies = await getPopularMovies()
         setMovies(popularMovies)
       }

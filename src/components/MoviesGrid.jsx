@@ -1,3 +1,4 @@
+import '../css/MoviesGrid.css'
 import MovieCard from './MovieCard'
 
 function MoviesGrid({ movies }) {
