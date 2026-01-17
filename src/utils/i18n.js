@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next'
 const resources = {
   en: {
     translation: {
-      navbar: { home: 'Home', favorites: 'Favorites' },
+      navbar: { brand: 'ML', home: 'Home', favorites: 'Favorites' },
       home: {
         pageTitle: 'Movie List',
       },
@@ -15,7 +15,7 @@ const resources = {
   },
   ru: {
     translation: {
-      navbar: { home: 'Главная', favorites: 'Избранное' },
+      navbar: { brand: 'КФ', home: 'Главная', favorites: 'Избранное' },
       home: {
         pageTitle: 'Каталог фильмов',
       },

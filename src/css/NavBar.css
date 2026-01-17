@@ -1,0 +1,68 @@
+.navbar {
+  position: fixed;
+  top: 0px;
+  z-index: 200;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+}
+
+.navbar > * {
+  height: 50px;
+  background-color: var(--bg-pr);
+  border-radius: 10px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: var(--shadow2);
+}
+.navbar > *:hover {
+  box-shadow: var(--shadow1);
+  z-index: 210;
+}
+
+.navbar__brand {
+  flex-shrink: 0;
+}
+.navbar__brand:hover {
+  transform: scale(1.1);
+}
+
+.navbar__brand-logo {
+  display: inline-block;
+  height: 100%;
+  line-height: 50px;
+  color: var(--text-pr);
+  font-weight: 800;
+  font-size: 30px;
+  padding: 0 10px;
+}
+
+.navbar__links {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+.navbar__links:hover {
+  transform: scale(1.02);
+}
+
+.navbar__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 50px;
+  color: var(--text-sc);
+  padding: 0 10px;
+  transition: color 0.4s;
+}
+.navbar__link:hover {
+  color: var(--text-pr);
+}
+.navbar__link.active {
+  color: var(--text-pr);
+}
+
+.navbar__options {
+  flex-shrink: 0;
+}
+.navbar__options:hover {
+  transform: scale(1.1);
+}

@@ -1,20 +1,29 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
+import '../css/NavBar.css'
 import LanguageSelector from './LanguageSelector'
 
 function NavBar() {
   const { t } = useTranslation('translation')
+  const activeRoute = useLocation().pathname
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">
-        <Link to="/">Movies List</Link>
+      <div className="navbar__brand">
+        <Link to="/" className='navbar__brand-logo'>
+          {t('navbar.brand')}
+        </Link>
       </div>
-      <LanguageSelector />
-      <div className="navbar-links">
-        <Link to="/" className="navbar-link">{t('navbar.home')}</Link>
-        <Link to="/favorites" className="navbar-link">{t('navbar.favorites')}</Link>
+      <div className="navbar__links">
+        <Link to="/" className={`navbar__link ${activeRoute === '/' ? 'active' : ''}`}>
+          {t('navbar.home')}
+        </Link>
+        <Link to="/favorites" className={`navbar__link ${activeRoute === '/favorites' ? 'active' : ''}`}>
+          {t('navbar.favorites')}
+        </Link>
+      </div>
+      <div className="navbar__options">
+        <LanguageSelector />
       </div>
     </nav>
   )
