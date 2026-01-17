@@ -10,7 +10,6 @@ function Favorites() {
 
   useEffect(() => {
     document.title = t('favorites.pageTitle')
-    document.documentElement.lang = i18n.language
   }, [i18n.language])
 
   if (favorites && favorites.length > 0) {

@@ -41,6 +41,7 @@
   cursor: pointer;
   transition: opacity 0.4s, box-shadow 0.4s, transform 0.4s;
   padding-top: 5px;
+  box-shadow: var(--shadow2);
 }
 .movie-card__favorite-btn.active {
   opacity: 1;
@@ -54,7 +55,11 @@
 }
 
 .movie-card__favorite-btn svg path {
+  transition: fill 0.2s;
   fill: var(--text-pr);
+}
+.movie-card__favorite-btn:hover svg path {
+  fill: var(--accent1);
 }
 .movie-card__favorite-btn.active svg path {
   fill: var(--accent1);

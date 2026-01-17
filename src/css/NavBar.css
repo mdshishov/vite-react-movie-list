@@ -4,7 +4,7 @@
   z-index: 200;
   width: 100%;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   padding: 15px;
 }
 
@@ -31,7 +31,7 @@
   display: inline-block;
   height: 100%;
   line-height: 50px;
-  color: var(--text-pr);
+  color: var(--accent1);
   font-weight: 800;
   font-size: 30px;
   padding: 0 10px;
@@ -49,20 +49,22 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 50px;
-  color: var(--text-sc);
+  color: var(--text-pr);
   padding: 0 10px;
-  transition: color 0.4s;
+  transition: color 0.2s;
 }
 .navbar__link:hover {
-  color: var(--text-pr);
+  color: var(--accent1);
 }
 .navbar__link.active {
-  color: var(--text-pr);
+  color: var(--accent1);
 }
 
-.navbar__options {
+.navbar__option {
+  height: 50px;
+  width: 50px;
   flex-shrink: 0;
 }
-.navbar__options:hover {
+.navbar__option:hover {
   transform: scale(1.1);
 }

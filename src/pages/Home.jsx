@@ -31,7 +31,6 @@ function Home() {
     }
 
     document.title = t('home.pageTitle')
-    document.documentElement.lang = i18n.language
 
     loadPopularMovies()
   }, [i18n.language])

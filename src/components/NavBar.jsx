@@ -22,7 +22,7 @@ function NavBar() {
           {t('navbar.favorites')}
         </Link>
       </div>
-      <div className="navbar__options">
+      <div className="navbar__option">
         <LanguageSelector />
       </div>
     </nav>
