@@ -12,26 +12,25 @@ function Home() {
 
   const { t, i18n } = useTranslation()
 
-  useEffect(() => {
-    const loadPopularMovies = async () => {
-      try {
-        setLoading(true)
-        setError(null)
+  const loadPopularMovies = async () => {
+    try {
+      setLoading(true)
+      setError(null)
 
-        const popularMovies = await getPopularMovies()
-        setMovies(popularMovies)
-      }
-      catch (e) {
-        console.error(e)
-        setError('Failed to load movies :(')
-      }
-      finally {
-        setLoading(false)
-      }
+      const popularMovies = await getPopularMovies()
+      setMovies(popularMovies)
     }
+    catch (e) {
+      console.error(e)
+      setError('Failed to load movies :(')
+    }
+    finally {
+      setLoading(false)
+    }
+  }
 
+  useEffect(() => {
     document.title = t('home.pageTitle')
-
     loadPopularMovies()
   }, [i18n.language])
 
@@ -39,7 +38,10 @@ function Home() {
     e.preventDefault()
     const query = searchQuery.trim()
 
-    if (!query) return
+    if (!query) {
+      loadPopularMovies()
+      return
+    }
     if (loading) return
 
     setLoading(true)
