@@ -47,6 +47,7 @@ body {
   color: var(--text-pr);
   background-color: var(--bg);
   width: 100%;
+  min-width: 320px;
 }
 
 #root {

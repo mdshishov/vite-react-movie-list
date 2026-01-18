@@ -3,9 +3,11 @@ import { getPopularMovies, searchMovies } from '../services/api'
 import MoviesGrid from '../components/MoviesGrid'
 import { useTranslation } from 'react-i18next'
 import '../css/Home.css'
+import SearchIcon from '../components/icons/Search'
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('')
+  const [searchFocused, setSearchFocused] = useState(false)
   const [movies, setMovies] = useState([])
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -61,16 +63,23 @@ function Home() {
 
   return (
     <div className="home">
-      <form onSubmit={handleSearch} className="search-form">
-        <input
-          type="text"
-          placeholder="Start searching..."
-          className="search-input"
-          value={searchQuery}
-          onChange={e => setSearchQuery(e.target.value)}
-        />
-        <button type="submit" className="search-button">Search</button>
-      </form>
+      <div className="search-container">
+        <form onSubmit={handleSearch} className={`search ${searchFocused ? 'focused' : ''}`}>
+          <input
+            type="text"
+            placeholder={t('home.searchPlaceholder')}
+            className="search__input"
+            name="search"
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            onFocus={() => setSearchFocused(true)}
+            onBlur={() => setSearchFocused(false)}
+          />
+          <button type="submit" className="search__button">
+            <SearchIcon />
+          </button>
+        </form>
+      </div>
 
       {error && (
         <div className="error">

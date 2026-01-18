@@ -7,6 +7,58 @@
   justify-content: flex-start;
 }
 
+.search-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.search {
+  max-width: 440px;
+  flex-basis: 200px;
+  flex-grow: 0.5;
+  background-color: var(--bg-pr);
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.search:hover,
+.search.focused {
+  transform: scale(1.05);
+  box-shadow: var(--shadow2);
+}
+
+.search__input {
+  font-size: 14px;
+  font-weight: 700;
+  flex-grow: 1;
+  padding: 0 15px;
+}
+.search__input::placeholder {
+  color: var(--text-sc);
+  font-weight: 400;
+}
+
+.search__button {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.search__button svg {
+  height: 40px;
+}
+.search__button svg path {
+  fill: var(--text-pr);
+  transition: fill 0.2s;
+}
+.search__button:hover svg path {
+  fill: var(--accent1);
+}
+
 .error {
   background-color: var(--bg-pr);
   padding: 30px;

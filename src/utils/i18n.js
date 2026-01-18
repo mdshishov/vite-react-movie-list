@@ -9,6 +9,7 @@ const resources = {
         pageTitle: 'Movie List',
         errorLoad: 'Failed to load movies',
         errorSearch: 'Failed to search movies',
+        searchPlaceholder: 'Start searching...',
       },
       favorites: {
         pageTitle: 'Favorites',
@@ -22,6 +23,7 @@ const resources = {
         pageTitle: 'Каталог фильмов',
         errorLoad: 'Возникла ошибка при загрузке фильмов',
         errorSearch: 'Возникла ошибка при поиске фильмов',
+        searchPlaceholder: 'Начать поиск...',
       },
       favorites: {
         pageTitle: 'Избранное',

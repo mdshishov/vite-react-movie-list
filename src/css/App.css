@@ -5,5 +5,16 @@
   width: 100%;
   flex-grow: 1;
   min-width: 320px;
-  padding: 80px 15px;
+  padding: 65px 15px;
+}
+
+@media (max-width: 500px) {
+  .main {
+    padding: 55px 10px;
+  }
+}
+@media (max-width: 400px) {
+  .main {
+    padding: 47px 10px;
+  }
 }
