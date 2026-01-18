@@ -51,6 +51,7 @@
   white-space: nowrap;
   padding: 5px 15px;
   transition: color 0.2s;
+  color: var(--text-pr)
 }
 .dd__option:hover,
 .dd__option:hover span {

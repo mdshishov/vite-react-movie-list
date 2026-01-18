@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import '../css/NavBar.css'
 import LanguageSelector from './LanguageSelector'
+import ThemeToggle from './ThemeToggle'
 
 function NavBar() {
   const { t } = useTranslation('translation')
@@ -24,6 +25,9 @@ function NavBar() {
       </div>
       <div className="navbar__option">
         <LanguageSelector />
+      </div>
+      <div className="navbar__option">
+        <ThemeToggle />
       </div>
     </nav>
   )

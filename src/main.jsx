@@ -5,6 +5,11 @@ import './utils/i18n'
 import './css/index.css'
 import App from './App.jsx'
 
+const themePref = window.matchMedia('(prefers-color-scheme: dark)').matches
+const stored = localStorage.getItem('isDark')
+const isDark = stored ? JSON.parse(stored) : themePref
+root.setAttribute('data-theme', isDark ? 'dark' : 'light')
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

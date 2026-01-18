@@ -46,8 +46,10 @@
 }
 
 .navbar__link {
+  display: inline-block;
   font-size: 16px;
   font-weight: 700;
+  height: 100%;
   line-height: 50px;
   color: var(--text-pr);
   padding: 0 10px;
@@ -67,4 +69,17 @@
 }
 .navbar__option:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 10px;
+    zoom: 0.9;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    zoom: 0.8;
+  }
 }
