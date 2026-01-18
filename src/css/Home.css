@@ -36,6 +36,7 @@
   font-weight: 700;
   flex-grow: 1;
   padding: 0 15px;
+  color: var(--text-pr);
 }
 .search__input::placeholder {
   color: var(--text-sc);
@@ -59,13 +60,20 @@
   fill: var(--accent1);
 }
 
+.centering-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
 .error {
   background-color: var(--bg-pr);
   padding: 30px;
   width: 280px;
-  margin-top: 50px;
   border-radius: 30px;
-  animation: moveInErr 0.3s ease-out;
+  animation: moveIn 0.3s ease-out;
 }
 
 .error__sad-face {
@@ -83,7 +91,13 @@
   line-height: 1.2;
 }
 
-@keyframes moveInErr {
+.loading {
+  height: 100px;
+  width: 100px;
+  animation: moveIn 0.3s ease-out;
+}
+
+@keyframes moveIn {
   from {
     opacity: 0;
     transform: translateY(10px);

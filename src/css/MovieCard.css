@@ -9,10 +9,10 @@
   transition: transform 0.4s, box-shadow 0.4s;
   display: flex;
   flex-direction: column;
-  animation: moveIn 0.3s ease-out;
+  animation: moveInCard 0.3s ease-out;
 }
 
-@keyframes moveIn {
+@keyframes moveInCard {
   from {
     opacity: 0;
     transform: translateY(10px);

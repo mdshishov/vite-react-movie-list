@@ -4,6 +4,7 @@ import MoviesGrid from '../components/MoviesGrid'
 import { useTranslation } from 'react-i18next'
 import '../css/Home.css'
 import SearchIcon from '../components/icons/Search'
+import LoadingIcon from '../components/icons/Loading'
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -82,14 +83,20 @@ function Home() {
       </div>
 
       {error && (
-        <div className="error">
-          <div className="error__sad-face">:(</div>
-          <div className="error__message">{error}</div>
+        <div className='centering-container'>
+          <div className="error">
+            <div className="error__sad-face">:(</div>
+            <div className="error__message">{error}</div>
+          </div>
         </div>
       )}
 
       {loading ? (
-        <div className="loading">Loading...</div>
+        <div className='centering-container'>
+          <div className="loading" >
+            <LoadingIcon />
+          </div>
+        </div>
       ) : (
         <MoviesGrid movies={movies} />
       )}
