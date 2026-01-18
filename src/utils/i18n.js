@@ -13,6 +13,7 @@ const resources = {
       },
       favorites: {
         pageTitle: 'Favorites',
+        noFavs: "You haven't added any movies to your Favorites yet",
       },
     },
   },
@@ -27,6 +28,7 @@ const resources = {
       },
       favorites: {
         pageTitle: 'Избранное',
+        noFavs: 'Вы ещё не добавили ни одного фильма в «Избранное»',
       },
     },
   },

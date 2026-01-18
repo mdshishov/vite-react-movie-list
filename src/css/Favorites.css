@@ -1,0 +1,18 @@
+.favorites {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 60px;
+}
+
+.no-favs-message {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-pr);
+    line-height: 1.2;
+    text-align: center;
+    width: 250px;
+}
