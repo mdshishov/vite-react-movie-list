@@ -87,10 +87,11 @@
 }
 
 .movie-card__title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--text-pr);
   margin-bottom: 6px;
+  line-height: 1.2;
 }
 
 .movie-card__date {
