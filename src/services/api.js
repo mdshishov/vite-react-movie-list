@@ -10,6 +10,11 @@ export const getPopularMovies = async () => {
       Authorization: `Bearer ${API_TOKEN}`,
     },
   })
+
+  if (!response.ok) {
+    throw new Error(response.status)
+  }
+
   const data = await response.json()
   return data.results
 }
@@ -21,6 +26,11 @@ export const searchMovies = async (query) => {
       Authorization: `Bearer ${API_TOKEN}`,
     },
   })
+
+  if (!response.ok) {
+    throw new Error(response.status)
+  }
+
   const data = await response.json()
   return data.results
 }

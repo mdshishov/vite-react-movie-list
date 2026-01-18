@@ -7,6 +7,8 @@ const resources = {
       navbar: { brand: 'ML', home: 'Home', favorites: 'Favorites' },
       home: {
         pageTitle: 'Movie List',
+        errorLoad: 'Failed to load movies',
+        errorSearch: 'Failed to search movies',
       },
       favorites: {
         pageTitle: 'Favorites',
@@ -18,6 +20,8 @@ const resources = {
       navbar: { brand: 'КФ', home: 'Главная', favorites: 'Избранное' },
       home: {
         pageTitle: 'Каталог фильмов',
+        errorLoad: 'Возникла ошибка при загрузке фильмов',
+        errorSearch: 'Возникла ошибка при поиске фильмов',
       },
       favorites: {
         pageTitle: 'Избранное',

@@ -22,7 +22,7 @@ function Home() {
     }
     catch (e) {
       console.error(e)
-      setError('Failed to load movies :(')
+      setError(t('home.errorLoad'))
     }
     finally {
       setLoading(false)
@@ -52,7 +52,7 @@ function Home() {
     }
     catch (e) {
       console.error(e)
-      setError('Failed to search movies :(')
+      setError(t('home.errorSearch'))
     }
     finally {
       setLoading(false)
@@ -72,7 +72,12 @@ function Home() {
         <button type="submit" className="search-button">Search</button>
       </form>
 
-      {error && <div className="error-message">{error}</div>}
+      {error && (
+        <div className="error">
+          <div className="error__sad-face">:(</div>
+          <div className="error__message">{error}</div>
+        </div>
+      )}
 
       {loading ? (
         <div className="loading">Loading...</div>
