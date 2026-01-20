@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import '../css/ThemeToggle.css';
-import SunIcon from './icons/Sun'
+
+import SunIcon from '@/icons/Sun'
+import './ThemeToggle.css';
 
 const ThemeToggle = () => {
   const themePref = window.matchMedia('(prefers-color-scheme: dark)').matches

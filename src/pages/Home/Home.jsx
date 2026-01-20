@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { getPopularMovies, searchMovies } from '../services/api'
-import MoviesGrid from '../components/MoviesGrid'
 import { useTranslation } from 'react-i18next'
-import '../css/Home.css'
-import SearchIcon from '../components/icons/Search'
-import LoadingIcon from '../components/icons/Loading'
+
+import { getPopularMovies, searchMovies } from '@/services/api'
+import MoviesGrid from '@/components/MoviesGrid/MoviesGrid'
+import SearchIcon from '@/icons/Search'
+import LoadingIcon from '@/icons/Loading'
+import './Home.css'
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('')

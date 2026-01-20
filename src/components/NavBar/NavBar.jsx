@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import '../css/NavBar.css'
-import LanguageSelector from './LanguageSelector'
-import ThemeToggle from './ThemeToggle'
+
+import LanguageSelector from '@/components/LanguageSelector/LanguageSelector'
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle'
+import './NavBar.css'
 
 function NavBar() {
   const { t } = useTranslation('translation')

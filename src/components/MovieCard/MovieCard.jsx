@@ -1,7 +1,7 @@
-import '../css/MovieCard.css'
-import { useMovieContext } from '../contexts/MovieContext'
-import HeartEmptyIcon from './icons/HeartEmpty'
-import HeartFilledIcon from './icons/HeartFilled'
+import { useMovieContext } from '@/contexts/MovieContext'
+import HeartEmptyIcon from '@/icons/HeartEmpty'
+import HeartFilledIcon from '@/icons/HeartFilled'
+import './MovieCard.css'
 
 function MovieCard({ movie }) {
   const { addFavorite, removeFavorite, isFavorite } = useMovieContext()

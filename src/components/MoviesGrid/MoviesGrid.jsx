@@ -1,5 +1,5 @@
-import '../css/MoviesGrid.css'
-import MovieCard from './MovieCard'
+import MovieCard from '@/components/MovieCard/MovieCard'
+import './MoviesGrid.css'
 
 function MoviesGrid({ movies }) {
   return (

@@ -1,8 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+
 import './utils/i18n'
-import './css/index.css'
+import './index.css'
 import App from './App.jsx'
 
 const themePref = window.matchMedia('(prefers-color-scheme: dark)').matches

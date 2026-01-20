@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import '../css/LanguageSelector.css'
+
+import './LanguageSelector.css'
 
 function LanguageSelector() {
   const [open, setOpen] = useState(false)

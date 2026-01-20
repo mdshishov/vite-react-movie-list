@@ -1,8 +1,9 @@
-import { useMovieContext } from '../contexts/MovieContext'
-import MoviesGrid from '../components/MoviesGrid'
-import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
-import '../css/Favorites.css'
+import { useTranslation } from 'react-i18next'
+
+import { useMovieContext } from '@/contexts/MovieContext'
+import MoviesGrid from '@/components/MoviesGrid/MoviesGrid'
+import './Favorites.css'
 
 function Favorites() {
   const { favorites } = useMovieContext()
