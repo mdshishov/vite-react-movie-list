@@ -1,0 +1,14 @@
+.error__sad-face {
+  font-weight: 800;
+  font-size: 60px;
+  color: var(--text-sc);
+  margin-bottom: 35px;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+.error__message {
+  font-weight: 700;
+  color: var(--text-pr);
+  line-height: 1.2;
+}

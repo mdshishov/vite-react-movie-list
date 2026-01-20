@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import { getPopularMovies, searchMovies } from '@/services/api'
 import MoviesGrid from '@/components/MoviesGrid/MoviesGrid'
+import ErrorMessage from '@/components/ErrorMessage/ErrorMessage'
 import SearchIcon from '@/icons/Search'
 import LoadingIcon from '@/icons/Loading'
 import './Home.css'
@@ -85,9 +86,8 @@ function Home() {
 
       {error && (
         <div className='centering-container'>
-          <div className="error">
-            <div className="error__sad-face">:(</div>
-            <div className="error__message">{error}</div>
+          <div className="error-container">
+            <ErrorMessage message={error} />
           </div>
         </div>
       )}

@@ -25,6 +25,7 @@
   display: flex;
   transition: transform 0.4s, box-shadow 0.4s;
 }
+
 .search:hover,
 .search.focused {
   transform: scale(1.05);
@@ -38,6 +39,7 @@
   padding: 0 15px;
   color: var(--text-pr);
 }
+
 .search__input::placeholder {
   color: var(--text-sc);
   font-weight: 400;
@@ -52,12 +54,10 @@
 
 .search__button svg {
   height: 40px;
-}
-.search__button svg path {
   fill: var(--text-pr);
   transition: fill 0.2s;
 }
-.search__button:hover svg path {
+.search__button:hover svg {
   fill: var(--accent1);
 }
 
@@ -69,7 +69,7 @@
   padding-bottom: 30px;
 }
 
-.error {
+.error-container {
   background-color: var(--bg-pr);
   padding: 30px;
   width: 280px;
@@ -77,25 +77,13 @@
   animation: moveIn 0.3s ease-out;
 }
 
-.error__sad-face {
-  font-weight: 800;
-  font-size: 60px;
-  color: var(--text-sc);
-  margin-bottom: 35px;
-  margin-top: 10px;
-  opacity: 0.5;
-}
-
-.error__message {
-  font-weight: 700;
-  color: var(--text-pr);
-  line-height: 1.2;
-}
-
 .loading {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   animation: moveIn 0.3s ease-out;
+}
+.loading svg{
+  fill: var(--accent1);
 }
 
 @keyframes moveIn {
@@ -103,6 +91,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

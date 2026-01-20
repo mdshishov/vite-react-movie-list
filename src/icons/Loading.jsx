@@ -1,22 +1,10 @@
 export default () => {
-  const color = 'var(--accent1)'
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-      <radialGradient id="a12" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
-        <stop offset="0" stop-color={color}>
-        </stop>
-        <stop offset=".3" stop-color={color} stop-opacity=".9">
-        </stop><stop offset=".6" stop-color={color} stop-opacity=".6">
-        </stop><stop offset=".8" stop-color={color} stop-opacity=".3">
-        </stop><stop offset="1" stop-color={color} stop-opacity="0">
-        </stop>
-      </radialGradient>
-      <circle transform-origin="center" fill="none" stroke="url(#a12)" stroke-width="15" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70">
-        <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite">
-        </animateTransform>
-      </circle>
-      <circle transform-origin="center" fill="none" opacity=".2" stroke={color} stroke-width="15" stroke-linecap="round" cx="100" cy="100" r="70">
-      </circle>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" />
+      <path d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
+        <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite" />
+      </path>
     </svg>
   )
 }
